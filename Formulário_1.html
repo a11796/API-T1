@@ -18,14 +18,56 @@
             text-align: center;
         }
         form{
-            margin-left: 50px;
+            margin-left: 100px;
         }
     </style>
 </head>
 <body>
     <h1>Exemplo de formulários 1</h1>
     <form action="" method="post">
-    <label for="nomep">Nome: </label>
+    <fieldset>
+    <legend>Dados pessoais</legend>
+    <br>
+    <table>
+    <tr>
+    <td><label for="nomep">Nome: </label></td>
+    <td><input type="text" name="nomep" maxlength="150" size="100" required></td>
+    <tr>
+    <td><label for="morada">Morada: </label></td>
+    <td><input type="text" name="morada" maxlength="150" size="100" required></td>
+    <tr>
+    <td><label for="email">Email: </label></td>
+    <td><input type="email" name="email" size="100" required></td>
+    <label for="telemovel">Telemóvel: </label>
+    <input type="number" name="telemovel" required>
+    <label for="datanasc">Data de nascimento: </label>
+    <input type="date" name="datanasc">
+    </table>
+    </fieldset>
+    <fieldset>
+        <legend>Dados complementares</legend>
+        <br>
+        <label for="estado">Estado Civil: </label>
+        <input type="radio" name="estado" value="S">Solteiro
+        <input type="radio" name="estado" value="C">Casado
+        <input type="radio" name="estado" value="C">Viúvo
+        <input type="radio" name="estado" value="C">Divorcíado <br>
+        <label for="regiao">Região: </label>
+        <select name="regiao" id="regiao">
+            <option value="1">Norte</option>
+            <option value="2">Centro</option>
+            <option value="3">Sul</option>
+        </select><br>
+        <label for="desportos">Desportos Favoritos: </label>
+        <input type="checkbox" id="desporto 1" value="1">Futebol
+        <input type="checkbox" id="desporto 2" value="1">Voleibol
+        <input type="checkbox" id="desporto 3" value="1" checked>Padel
+        <input type="checkbox" id="desporto 4" value="1">Andebol
+        
+
+    </fieldset>
+    <center><input type="submit" value="Submeter Formulário"></center> 
+    
 
     </form>
 </body>
